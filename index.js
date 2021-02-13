@@ -4,19 +4,17 @@ const Discord = require('discord.js');
 const client = new Discord.Client();
 
 client.once('ready', () => {
-    console.log();
- 
+    console.log('Ready!');
 });
-
-
-
-client.once('message', message =>{
+client.once('message',message=>{
     if(message.content == '!time') {
-        var data = new Date();
-        var ora = data.getHours();
-        var minuto = data.getMinutes();
+    var data = new Date();
+    var ora = data.getHours();
+    var minuto = data.getMinutes();
 
-        message.channel.send('ORA ATTUALE :alarm_clock: ' + ora + ':' + minuto);
-    }
-});
-client.login("process.emv.token")
+    message.channel.send('ORA ATTUALE :alarm_clock:  ' + ora + ':' + minuto);
+}
+})
+
+
+client.login('ODA5Mzk5NDE4OTk3NDQwNTIy.YCUh8w.SaSWMMxqj5GjjudGMxSjYQkeY1Y')
